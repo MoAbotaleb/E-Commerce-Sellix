@@ -1,0 +1,4 @@
+header .active span{
+  @apply max-w-full
+
+}
