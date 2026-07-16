@@ -8,7 +8,7 @@ import { TextRoll } from "@/components/ui/TextRoll";
 import { CiSearch } from "react-icons/ci";
 import HeaderBasket from "@/components/eCommerce/HeaderBasket/HeaderBasket";
 import HeaderLink from "./HeaderLink";
-import "@/styles/HeaderStyle.css"
+import "@/styles/Header.css";
 
 export default function Header() {
   const logoRef = useRef<HTMLSpanElement | null>(null);
@@ -93,18 +93,18 @@ export default function Header() {
               <HeaderLink url="/categories" title="categories" />
             </li>
             <li>
-              
+              <HeaderLink url="/products" title="products" />
+            </li>
+            <li>
               <HeaderLink url="/about-us" title="about" />
             </li>
           </ul>
           <ul className="flex items-center gap-3 text-white capitalize">
             <li>
-              
               <HeaderLink url="/login" title="login" />
             </li>
             <li>
-                            <HeaderLink url="/register" title="register" />
-
+              <HeaderLink url="/register" title="register" />
             </li>
           </ul>
         </div>

@@ -6,6 +6,7 @@ import Products from "@/pages/Products";
 import AboutUs from "@/pages/AboutUs";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
+import Error from "@/pages/Error";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,9 +21,31 @@ const router = createBrowserRouter([
         element: <Categories />,
       },
       {
-        path: "products/:prefix",
+        path: "products",
         element: <Products />,
       },
+      {
+        path: "products/:prefix",
+        element: <Products />,
+        loader: ({ params }) => {
+          if (
+            typeof params.prefix !== "string" ||
+            !/^[a-z]+$/i.test(params.prefix)
+          ) {
+            throw new Response("Bad Request", {
+              statusText: "Categories not found",
+              status: 400,
+            });
+            // or
+            //  throw new Response(null, {
+              
+            //   status: 400,
+            // });
+          }
+          return true;
+        },
+      },
+    
       {
         path: "about-us",
         element: <AboutUs />,
@@ -36,6 +59,7 @@ const router = createBrowserRouter([
         element: <Register />,
       },
     ],
+    errorElement: <Error />,
   },
 ]);
 export default function AppRouter() {

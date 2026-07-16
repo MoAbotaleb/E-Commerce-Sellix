@@ -49,6 +49,8 @@
 
   --font-Concert: "Concert One", sans-serif;
   --font-Audiowide: "Audiowide", sans-serif;
+  --breakpoint-xs: 400px;
+
 }
 
 :root {
