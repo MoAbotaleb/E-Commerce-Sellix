@@ -76,14 +76,17 @@ export const CardContainer = ({
 export const CardBody = ({
   children,
   className,
+  title,
 }: {
   children: React.ReactNode;
   className?: string;
+  title?: string;
 }) => {
   return (
     <div
+      title={title}
       className={cn(
-        " [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        " [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d] h-full",
         className,
       )}
     >
