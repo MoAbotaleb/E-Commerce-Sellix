@@ -15,7 +15,7 @@ export default function Category({ style, item }: CategoryProps) {
     >
       <div
         key={item.id}
-        className={`group flex flex-col items-center gap-2 cursor-pointer overflow-hidden ${style}`}
+        className={`group flex flex-col items-center gap-2 cursor-pointer overflow-hidden intialAnimate ${style}`}
       >
         <div className="relative aspect-square w-full overflow-hidden rounded-full border-2 border-transparent bg-gray-50 shadow-sm transition-all duration-300  group-hover:border-black group-hover:shadow-md">
           <img

@@ -58,9 +58,7 @@ const ProductsSlice = createSlice({
     });
     builder.addCase(actGetProductsByCatPerfix.rejected, (state, action) => {
       state.loading = "failed";
-      if (action.payload && typeof action.payload === "string") {
-        state.error = action.payload;
-      }
+     state.error = action.payload as string;
       // or
       // state.error=action.payload as string;
     });
