@@ -1,4 +1,5 @@
 import GridList from "@/components/common/GridList/GridList";
+import Heading from "@/components/common/Heading/Heading";
 import Category from "@/components/eCommerce/Category/Category";
 import Loading from "@/components/Feadback/Loading";
 import { useAppSelector } from "@/store/Hooks/Hooks";
@@ -16,6 +17,7 @@ export default function Categories() {
   return (
     <Loading loading={loading} error={error as string}>
       <section className="py-4">
+            <Heading title={`categories`} />
         <GridList
           records={records}
           renderItem={(record: ICategory) => {

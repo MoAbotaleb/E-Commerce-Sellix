@@ -6,7 +6,7 @@ const actGetCategories = createAsyncThunk(
     const { rejectWithValue } = thunkApi;
 
     try {
-      const data = await axios.get("http://localhost:3000/categories");
+      const data = await axios.get("/categories");
 
       return data.data;
     } catch (error) {

@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import type React from "react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // interface GridListProps<T extends {id:number}> {
 //   records: T[];
@@ -23,9 +23,13 @@ export default function GridList<T>({
   // const ListRender = records.map((item) => <div key={item.id}>{renderItem(item)}</div> );
   const ListRender = records.map((item) => renderItem(item));
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const [firstAnimate, setFirstAnimate] = useState(false);
+  useEffect(() => {
+    ListRender.length > 0 ? setFirstAnimate(true) : setFirstAnimate(false);
+  }, [ListRender]);
   useGSAP(
     () => {
-      if (ListRender && ListRender.length > 0) {
+      if (firstAnimate) {
         gsap.fromTo(
           ".intialAnimate",
           {
@@ -42,14 +46,15 @@ export default function GridList<T>({
       }
     },
     {
-      dependencies: [ListRender],
+      dependencies: [firstAnimate],
       scope: containerRef,
     },
   );
+
   return (
     <div
       ref={containerRef}
-      className={`grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-3 ${style}`}
+      className={`grid grid-cols-3 xs:grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-3  ${style}`}
     >
       {ListRender}
     </div>

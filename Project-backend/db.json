@@ -31,62 +31,71 @@
       "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/1dda9ae79a671__h_m-w40-06102022-7416b-1x1.jpg"
     }
   ],
+
   "products": [
     {
       "id": 1,
       "title": "Regular Fit Jersey Top",
-      "price": "249.00",
+      "price": 249,
       "cat_prefix": "men",
-      "img": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600"
+      "img": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600",
+      "max": 15
     },
     {
       "id": 2,
       "title": "Regular Fit Jersey Top",
-      "price": "229.00",
+      "price": 229,
       "cat_prefix": "men",
-      "img": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+      "img": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600",
+      "max": 10
     },
     {
       "id": 3,
       "title": "Cotton Polo Shirt",
-      "price": "200.00",
+      "price": 200,
       "cat_prefix": "men",
-      "img": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600"
+      "img": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600",
+      "max": 20
     },
     {
       "id": 4,
       "title": "Cotton T-Shirt",
-      "price": "100.00",
+      "price": 100,
       "cat_prefix": "women",
-      "img": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600"
+      "img": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600",
+      "max": 25
     },
     {
       "id": 5,
       "title": "Sweatshirt Shorts",
-      "price": "300.00",
+      "price": 300,
       "cat_prefix": "women",
-      "img": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600"
+      "img": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600",
+      "max": 8
     },
     {
       "id": 6,
       "title": "Velour Top",
-      "price": "300.00",
+      "price": 300,
       "cat_prefix": "kids",
-      "img": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=600"
+      "img": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=600",
+      "max": 12
     },
     {
       "id": 9,
       "title": "Pile All-In-One Suit With Ears",
-      "price": "500.00",
+      "price": 500,
       "cat_prefix": "baby",
-      "img": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600"
+      "img": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600",
+      "max": 5
     },
     {
       "id": 17,
       "title": "Regular Fit Football Shirt",
-      "price": "449.00",
+      "price": 449,
       "cat_prefix": "sport",
-      "img": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600"
+      "img": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600",
+      "max": 18
     }
   ]
 }

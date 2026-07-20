@@ -7,7 +7,7 @@ const actGetProductsByCatPerfix = createAsyncThunk(
 
     try {
       const data = await axios.get(
-        `http://localhost:3000/products/?cat_prefix=${prefix}`,
+        `/products/?cat_prefix=${prefix}`,
       );
 
       return data.data;

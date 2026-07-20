@@ -4,4 +4,6 @@ export interface IProduct {
   price: number;
   cat_prefix: string;
   img: string;
+  qty?: number;
+  max: number;
 }

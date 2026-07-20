@@ -1,4 +1,5 @@
 import GridList from "@/components/common/GridList/GridList";
+import Heading from "@/components/common/Heading/Heading";
 import Product from "@/components/eCommerce/Product/Product";
 import Loading from "@/components/Feadback/Loading";
 import { useAppDispatch, useAppSelector } from "@/store/Hooks/Hooks";
@@ -15,20 +16,29 @@ export default function ProductsByPrefix() {
   const { RecordsByPrefix, loading, error } = useAppSelector(
     (state) => state.ProductsReducer,
   );
+
   useEffect(() => {
     dispatch(actGetProductsByCatPerfix(prefix as string));
     return () => {
       CleanUpRecordsByPrefix();
     };
   }, [prefix, dispatch]);
- 
+
   return (
     <Loading loading={loading} error={error as string}>
       <section className="py-4">
-        <GridList style=" xs:grid-cols-2! sm:grid-cols-3! md:grid-cols-4! lg:grid-cols-5! "
+        <Heading title={`${prefix} Products`} />
+        <GridList
+          style="grid-cols-1! xs:grid-cols-2! sm:grid-cols-3! md:grid-cols-4! lg:grid-cols-5! "
           records={RecordsByPrefix}
-          renderItem={(record: IProduct) => {
-            return <Product key={record.id} item={record} style="intialAnimate opacity-0 translate-y-[100px] h-full" />;
+          renderItem={(record) => {
+            return (
+              <Product
+                key={record.id}
+                item={record}
+                style="intialAnimate opacity-0 translate-y-[100px] h-full"
+              />
+            );
           }}
         />
       </section>

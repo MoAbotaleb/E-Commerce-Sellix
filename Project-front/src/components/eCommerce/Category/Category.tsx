@@ -1,18 +1,15 @@
 import { CleanUpRecordsByPrefix } from "@/store/Products/ProductsSlice";
 import type { ICategory } from "@/types/CategoryTypes";
 import { Link } from "react-router-dom";
-
+import React from "react";
 interface CategoryProps {
   style?: string;
   item: ICategory;
 }
 
-export default function Category({ style, item }: CategoryProps) {
+export default React.memo(function Category({ style, item }: CategoryProps) {
   return (
-    <Link
-      
-      to={`/categories/products/${item.prefix}`}
-    >
+    <Link to={`/categories/products/${item.prefix}`}>
       <div
         key={item.id}
         className={`group flex flex-col items-center gap-2 cursor-pointer overflow-hidden intialAnimate ${style}`}
@@ -31,4 +28,4 @@ export default function Category({ style, item }: CategoryProps) {
       </div>
     </Link>
   );
-}
+});
