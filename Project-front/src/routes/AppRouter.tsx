@@ -7,6 +7,7 @@ import AboutUs from "@/pages/AboutUs";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import Error from "@/pages/Error";
+import ShoppingCart from "@/pages/ShoppingCart";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,10 @@ const router = createBrowserRouter([
           return true;
         },
       },
-
+      {
+        path: "shopping-cart",
+        element: <ShoppingCart />,
+      },
       {
         path: "about-us",
         element: <AboutUs />,

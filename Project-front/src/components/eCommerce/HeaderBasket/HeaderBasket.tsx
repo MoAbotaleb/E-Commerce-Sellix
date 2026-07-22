@@ -55,8 +55,7 @@ export default function HeaderBasket() {
   );
 
   return (
-    <Link to="cart">
-    
+    <Link to="shopping-cart">
       <div className="flex items-center gap-2">
         <div className="relative" ref={currentScope}>
           <span className="ml-auto absolute -right-1 top-1 translate-y-[-50%] block w-fit bg-violet-500 px-1 rounded-full text-white text-[13px]">

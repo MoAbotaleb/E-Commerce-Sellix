@@ -11,7 +11,7 @@ interface LoadSpinnerProps {
 export function LoadSpinner({ title, style, children }: LoadSpinnerProps) {
   return (
     <div
-      className={`flex w-full max-w-xs flex-col gap-4 [--radius:1rem] size-5  animate-bounce  ${style}`}
+      className={`flex w-full  flex-col gap-4 [--radius:1rem] size-5  animate-bounce mb-7 ${style}`}
     >
       <Item variant="muted" className="bg-gray-300">
         <ItemMedia>

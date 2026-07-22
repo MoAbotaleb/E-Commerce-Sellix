@@ -25,6 +25,7 @@ export default function Header() {
         rotate: 0,
         duration: 1,
         ease: "elastic",
+       
         repeat: -1,
         yoyo: true,
       },

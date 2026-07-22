@@ -9,3 +9,4 @@ export const GetCartTotalQty = createSelector(
     }, 0);
   },
 );
+
